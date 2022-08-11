@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="post-container">
+        <h1>All Comment Here</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, architecto.</p>
+        <p>Culpa sunt atque quam tempora animi eveniet corrupti aperiam a?</p>
+    </div>
+    <div>
+        <textarea name="" id="input-text" cols="30" rows="10"></textarea>
+        <button id="submit-post">Post</button>
+    </div>
+    <script>
+        document.getElementById('submit-post').addEventListener('click',function(){
+            const inputText = document.getElementById('input-text');
+            const inputTextValue = inputText.value;
+            
+            const p = document.createElement('p');
+            p.innerText = inputTextValue;
+
+            const container = document.getElementById('post-container');
+            container.appendChild(p);
+        })
+    </script>
+</body>
+</html>
